@@ -1,4 +1,4 @@
-﻿# Nexus-Chats
+# Nexus-Chats
 
 This is my A-level Computer Science Coursework. It has three main features. A direct messaging chat, an anonymous chat and a chat forum.
 
@@ -18,3 +18,4 @@ This is my A-level Computer Science Coursework. It has three main features. A di
 * nodemon
 * cd socket
 * nodemon
+(I am trying to figure out a shorter way to run these)
