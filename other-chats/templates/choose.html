@@ -1,0 +1,58 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Nexus' Phantom Zone</title>
+        <link
+        rel="stylesheet"
+        href="{{url_for('static', filename='css/style.css')}}"
+        />
+        <link 
+        rel="stylesheet" 
+        href="https://www.w3schools.com/w3css/4/w3.css"
+        >
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"
+            integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA=="
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body style="background-color:#282828;">
+        <div class="w3-bar" style="background-color:#232528;">
+            <div class="w3-bar-item w3-text-white"> 
+                <a href="http://127.0.0.1:5465/" class="no-underline w3-text-purple">
+                    The Phantom Zone 
+                </a>
+            </div>
+        </div>
+        <div class="content">
+
+<div class="w3-container w3-display-middle">
+<div class="w3-center w3-panel w3-border w3-border-gray w3-round-xxlarge w3-text-white">
+<form method="post" class="buttons">
+    <h3><strong class="w3-text-red">Enter A Chat Room</strong></h3>
+    <div>
+        <label>Name:</label>
+        <input
+            type="text"
+            placeholder="insert name here..."
+            name="name"
+            value="{{name}}"
+        />
+    </div>
+    <div class="join">
+        <input type="text" placeholder="insert room code here..." name="code" value="{{code}}"/>
+        <button type="submit" name="join">Join a room</button>
+    </div>
+    <button type="submit" name="create" class="create-btn">Create a room</button>
+    {% if error %}
+    <ul>
+        <li>{{error}}</li>
+    </ul>
+    {% endif %}
+</form>
+</div>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Nexus' Interspace</title>
+        <link
+        rel="stylesheet"
+        href="{{url_for('static', filename='css/style2.css')}}"
+        />
+        <link 
+        rel="stylesheet" 
+        href="https://www.w3schools.com/w3css/4/w3.css"
+        >
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"
+            integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA=="
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body style="background-color:#282828;">
+        <div class="w3-bar" style="background-color:#232528;">
+            <div class="w3-bar-item w3-text-white"> 
+                <a href="http://127.0.0.1:5465/" class="no-underline w3-text-green">
+                  Interspace 
+                </a>
+            </div>
+        </div>
+
+<div class="w3-text-white w3-padding">
+    <p class="w3-text-red"> <strong> Available Spaces: </strong> </p>
+    <li>General</li>
+    <li>Sports</li> 
+    <li>Music</li> 
+    <li>Tech</li> 
+    <li>Programming</li> 
+    <li>Gaming</li> 
+    <li>Development</li>
+</div>
+
+        <div class="content w3-display-middle w3-border w3-round-xxlarge w3-padding w3-text-white">
+            
+<form method="post" class="buttons">
+    <h3 class="w3-text-red">Enter a Chat Space</h3>
+    <div>
+        <label>Name:</label>
+        <input
+            type="text"
+            placeholder="What is your name?"
+            name="name"
+            value="{{name}}"
+        />
+    </div>
+    <div class="join">
+        <input type="text" placeholder="Which space?" name="code" value="{{code}}"/>
+        <button type="submit" name="join">Join a room</button>
+    </div>
+
+    {% if error %}
+    <ul>
+        <li>{{error}}</li>
+    </ul>
+    {% endif %}
+</form>
+</div>
+</body>
+</html>

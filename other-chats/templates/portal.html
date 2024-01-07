@@ -1,0 +1,50 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Nexus Portal</title>
+        <link
+        rel="stylesheet"
+        href="{{url_for('static', filename='css/style.css')}}"
+        />
+        <link 
+        rel="stylesheet" 
+        href="https://www.w3schools.com/w3css/4/w3.css"
+        >
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"
+            integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA=="
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body style="background-color:#282828;">
+        <div class="content w3-display-middle">
+            <div class="w3-text-white">
+                
+                <p class="w3-text-red w3-center"><strong>Welcome to Nexus!</strong></p>
+                <p class="w3-center">Choose which chatting space you would like to enter!</p>
+
+                <div class="w3-border w3-border-cyan w3-padding-small w3-text-cyan">
+                    <a href="http://192.168.0.252:5173/" class="no-underline">
+                        - Enter the Link Network!
+                    </a>
+                </div>
+                <p class="w3-text-cyan"style="font-size: 10px;">The Link Network is a direct messaging system where you can speak directly to whomever you wish.</p>
+                <p></p>
+                <div class="w3-border w3-border-purple w3-padding-small w3-text-purple">
+                    <a href="http://127.0.0.1:5465/home" class="no-underline">
+                        - Enter the Phantom Zone!
+                    </a>
+                </div>
+                <p class="w3-text-purple"style="font-size: 10px;">The Phantom Zone is an annonymous chatting system where you can create a temporary room to talk to anyone that you share your room code to. Your room and your messages will be deleted as soon as the room is empty.</p>
+                <p></p>
+                <div class="w3-border w3-border-green w3-padding-small w3-text-green">
+                    <a href="http://127.0.0.1:3485" class="no-underline">
+                        - Enter Interspace!
+                    </a>
+                </div>
+                <p class="w3-text-green"style="font-size: 10px;">Interspace is a chatting system where you can join a space from the list of available options and speak to whomever you wish about that topic. Unlike the Phantom Zone, messages are always kept regardless of how many people are in that space. For new space recommendations refer to the development space...</p>
+
+            </div>
+        </div>
+    </body>
+</html>
